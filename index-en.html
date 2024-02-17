@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Ondedieu Hugo</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <!-- css links -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- icons from awesome material -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- color picker -->
+    <div class="theme-picker">
+        <div class="theme-logo">
+        <!-- logo image goes here -->
+        <img src="./assets/img/color-picker.png" alt="Logo">
+    </div>
+        <input type="color" id="theme" title="select color theme">
+    </div>
+    <!-- header content -->
+    <header>
+        <div>
+            <a href="./index.html"><span class="logo-text"><span class="blue-span">Hugo</span> Ondedieu</span></a>
+        </div>
+
+        <div class="header-links">
+            <!-- cancel icon for menu in mobile viewport -->
+            <div class="cancel-icon">
+                <i class="fa-solid fa-xmark" style="font-size: larger;"></i>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="./index-en.html">Home</a></li>
+                    <li><a href="./index-en.html#projects">My projects</a></li>
+                    <li><a href="./index-en.html#about">About me</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="./assets/documents/Resume_OndedieuHugo.pdf" target="_blank"><button>Download my resume</button></a>
+            </div>
+
+            <div class="language-selector">
+                <img src="./assets/img/french-flag.png" alt="French Flag" onclick="ChangeLanguage()">
+            </div>
+            
+
+        </div>
+
+        <!-- menu icon for menu in mobile viewport -->
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+    <!-- main content -->
+    <main>
+        <!-- hero section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h3 title="Hello buddy">👋</h3>
+                <h1><span class="logo-text"><span class="blue-span">Hello</span></span></h1>
+                <p class="grey-span">
+                    I develop mobile and web applications, and I have lots of exciting little projects.💙💙
+                </p>
+                <div class="social-icon">
+                    <a href="https://github.com/Tekkyu" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hugo-ondedieu-52b78a23a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="#about"><button class="btn">See more</button></a>
+
+            </div>
+            <div class="hero-img">
+                <img src="./assets/img/hugo-eyes-opened.png" alt="Hugo image" onclick="changeMain()" id="OldImageMain">
+            </div>
+        </section>
+        <!-- service section -->
+        <section class="service-section" id="projects">
+            <h1>My recents <span class="blue-span">projects</span></h1>
+            <div class="service-cards-container">
+                <div class="service-card">
+                    <i class="fa-brands fa-android"></i>
+                    <h4>Mobile application</h4>
+                    <p>Development of a mobile application that allows users to create a shopping list interconnected with their family members.</p>
+                    <h5>Environments :</h5>
+                    <p>- Flutter (Android application development)</p>
+                    <p>- NodeJS/Express (API devlopment)</p>
+                    <a href="./demo/GroceryList/index.html" target="_blank">View demo</a><br>
+                    <a href="https://github.com/Tekkyu/groceryList" target="_blank">GitHub</a>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h4>Tipod Project</h4>
+                    <p>Designing a web scraping program aimed at extracting GPS data from our buoy and displaying it on an interactive map showing their locations. Developing a program allowing communication between our buoy and partner satellites.</p>
+                    <h5>Environments :</h5>
+                    <p>- Python (web scraping development)</p>
+                    <p>- Node-RED (map development with some security and authentification)</p>
+                    <p>- C++ (Buoy/satellite communication program development)</p>
+                    <p>- Linux (used to host the different applications + security + port forwarding from school)</p>
+                    <a href="https://github.com/Tekkyu/Tipod" target="_blank">GitHub</a>
+                </div>
+                <div class="service-card">
+                    <i class="fa-brands fa-wordpress-simple"></i>
+                    <h4>Web design</h4>
+                    <p>Professional website development for a pizzeria. </p>
+                    <h5>Environments :</h5>
+                    <p>- Wordpress (Template edit + formation)</p>
+                    <p>- Debian 11 (website hosting and virtual host configuration)</p>
+                    <a href="https://pizzaquercy.fr" target="_blank">View website</a>
+                </div>
+            </div>
+        </section>
+        <!-- about section -->
+        <section class="about-section" id="about">
+            <div class="img-div">
+                <img src="./assets/img/hugo-eyes-opened.png" alt="tekky image" onclick="changeAbout()" id="OldImageAbout">
+            </div>
+            <div>
+                <!-- about me list -->
+
+                <ol>
+                    <li>
+                        <h1>I am a <span class="blue-span">developer</span> but also a <span
+                                class="blue-span">dreamer</span></h1>
+                    </li>
+                    <li><strong>Experience : </strong>Junior</li>
+                    <li><strong>What I do : </strong> Web Application, Android and Windows. API, discord bot, video game server hosting(under Linux/Debian).</li>
+                    <li><strong>Where I live : </strong>81000, Tarn. France</li>
+                    <li><strong>Email : </strong><a href="mailto:hugoo.ondedieu@gmail.com">hugoo.ondedieu@gmail.com</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/hugo-ondedieu-52b78a23a/" target="_blank"><button class="btn">Connect with me</button></a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="copyright-paragraph">Copyright &copy; - Hugo Ondedieu - All Rights Reserved.</p>
+    </footer>
+
+    <!-- script link only for menu toggle & theme picker -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
